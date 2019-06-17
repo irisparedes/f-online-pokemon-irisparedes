@@ -27,7 +27,8 @@ class App extends Component {
           }
           this.setState({ pokemonList: pokemons });
           localStorage.setItem('pokeList', JSON.stringify(pokemons));
-        });
+        })
+        .catch(error => console.log('error', error));
       });
     } else {
       this.setState({ pokemonList: localData });
