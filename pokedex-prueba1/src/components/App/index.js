@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './styles.scss';
 import { fetchPokemon } from '../../services/fetchPokemon';
 import PokemonList from '../PokemonList';
@@ -45,10 +45,13 @@ class App extends Component {
       <div className="page">
         <div className="page__container">
           <header className="page__header">
-            <Filter filterBy={filterBy} getUserValue={this.getUserValue} />
+            <h1 classname="page__title">Pokedex</h1>
           </header>
           <main className="page__main">
-            <PokemonList pokemonList={pokemonList} filterBy={filterBy} />
+            <Fragment>
+              <Filter filterBy={filterBy} getUserValue={this.getUserValue} /> 
+              <PokemonList pokemonList={pokemonList} filterBy={filterBy} />
+            </Fragment>
           </main>
         </div>
       </div>
