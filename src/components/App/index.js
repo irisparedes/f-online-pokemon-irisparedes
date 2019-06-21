@@ -3,6 +3,8 @@ import './styles.scss';
 import { fetchPokemon } from '../../services/fetchPokemon';
 import { Route, Switch } from 'react-router-dom';
 import Home from '../Home';
+import PokemonDetails from '../PokemonDetails';
+
 
 class App extends Component {
   constructor(props) {
@@ -47,6 +49,7 @@ class App extends Component {
         <div className="page__container">
           <Switch>
             <Route exact path="/" render={() => <Home filterBy={filterBy} pokemonList={pokemonList} getUserValue={this.getUserValue} />} />
+            <Route path="/pokemon/:id" render={routerProps => <PokemonDetails id={routerProps.match.params.id} pokemonList={pokemonList} />} />
           </Switch>
         </div>
       </div>
