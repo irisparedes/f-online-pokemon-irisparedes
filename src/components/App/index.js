@@ -31,9 +31,10 @@ class App extends Component {
                 fetchPokemon(pokemon.species.url)
                   .then(moreData => {
                     pokemonData = { ...pokemonData, ...moreData };
-                    this.setState(
-                      prevState => {
-                        return { pokemonList: [...prevState.pokemonList, pokemonData] };
+                    this.setState(prevState => {
+                        return { pokemonList: 
+                          [...prevState.pokemonList, 
+                            pokemonData] };
                       },
                       () => this.orderAndSaveToLocal(this.state.pokemonList)
                     );
