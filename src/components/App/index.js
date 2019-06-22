@@ -60,6 +60,10 @@ class App extends Component {
     this.setState({ filterBy: value });
   }
 
+  clearFilter() {
+    this.setState({ filterBy: '' });
+  }
+
   render() {
     const { pokemonList, filterBy } = this.state;
     return (
