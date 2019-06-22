@@ -21,7 +21,7 @@ export default function Pokemon({ pokemonData: { id, name, sprites, types, evolv
         </ul>
         {evolves_from_species ? (
           <div className="pokemon__evolution">
-            <span className="evolution__title">Evoluciona de:</span>
+            <span className="evolution__title">Evoluciona de: </span>
             <span className="evolution__name">{evolves_from_species.name}</span>
           </div>
         ) : null}

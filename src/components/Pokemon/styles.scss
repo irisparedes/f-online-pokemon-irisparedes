@@ -37,7 +37,6 @@
   text-transform: capitalize;
   margin: 0 0 5px;
   letter-spacing: 4px;
-  font-family: 'pokemon-hollow';
 }
 
 .pokemon__types {
@@ -55,4 +54,7 @@
   padding: 3px;
   font-size: 12px;
   text-transform: uppercase;
+}
+.evolution__title {
+  text-decoration: none;
 }

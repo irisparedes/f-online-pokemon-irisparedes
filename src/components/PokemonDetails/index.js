@@ -7,7 +7,7 @@ class PokemonDetails extends Component {
   }
 
   render() {
-    const { id, pokemonList } = this.props;
+    const { id, pokemonList, evolves_from_species } = this.props;
     const pokemon = pokemonList.find(item => item.id === parseInt(id));
     return (
        <Fragment>
@@ -20,7 +20,7 @@ class PokemonDetails extends Component {
               <div className="pokemon__data-wrapper">
                 <div className="data__container">
                   <span className="data__content">{pokemon.height / 10}m</span>
-                  <span className="data__type">height</span>
+                  <span className="data__type">Altura</span>
                 </div>
                 <div className="data__container">
                   <span className="data__content-types">
@@ -34,7 +34,7 @@ class PokemonDetails extends Component {
                 </div>
                 <div className="data__container">
                   <span className="data__content">{pokemon.weight / 10}kg</span>
-                  <span className="data__type">weight</span>
+                  <span className="data__type">Peso</span>
                 </div>
               </div>
               <ul className="details__abilities">
@@ -48,6 +48,12 @@ class PokemonDetails extends Component {
                   </li>
                 ))}
               </ul>
+    
+                <div className="detail__evolution">
+                  <span className="evolution__title">Evoluciona de: </span>
+                    
+                    <span className="evolution__type">{evolves_from_species}</span>
+                </div>
               <div className="images__container">
                 <img src={pokemon.sprites.back_default} alt={pokemon.name} />
                 <img src={pokemon.sprites.front_default} alt={pokemon.name} />
