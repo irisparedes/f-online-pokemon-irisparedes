@@ -49,11 +49,11 @@ class PokemonDetails extends Component {
                 ))}
               </ul>
     
-                <div className="detail__evolution">
+                {/* <div className="detail__evolution">
                   <span className="evolution__title">Evoluciona de: </span>
                     
                     <span className="evolution__type">{evolves_from_species}</span>
-                </div>
+                </div> */}
               <div className="images__container">
                 <img src={pokemon.sprites.back_default} alt={pokemon.name} />
                 <img src={pokemon.sprites.front_default} alt={pokemon.name} />

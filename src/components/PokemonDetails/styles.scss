@@ -1,3 +1,5 @@
+@import '../../scss/colors';
+
 .pokemon__details-wrapper {
   height: 100vh;
   width: 100%;
@@ -7,8 +9,8 @@
 }
 
 .details__card {
-  background: white;
-  width: 80%;
+  background: rgb(57, 57, 119);
+  width: 85%;
   max-width: 600px;
   margin: 0 auto;
   position: relative;
@@ -26,7 +28,7 @@
 }
 
 .details__name {
-  color: grey;
+  color: $color-yellow;
   margin: 60px auto 30px;
   text-transform: capitalize;
   padding-bottom: 10px;
@@ -53,12 +55,12 @@
 }
 
 .data__content {
-  color: black;
+  color: $color-yellow;
   font-weight: bold;
 }
 
 .data__type {
-  color: grey;
+  color: $color-yellow;
   text-transform: uppercase;
   font-size: 12px;
   flex-grow: 1;
@@ -79,4 +81,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.label {
+  color: $color-yellow;
 }
