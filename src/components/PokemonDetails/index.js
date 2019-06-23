@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './styles.scss';
+import { Link } from 'react-router-dom';
+import arrowBack from '../../images/icons/arrowBack.png';
 
 class PokemonDetails extends Component {
   componentWillUnmount() {
@@ -7,7 +9,7 @@ class PokemonDetails extends Component {
   }
 
   render() {
-    const { id, pokemonList, evolves_from_species } = this.props;
+    const { id, pokemonList } = this.props;
     const pokemon = pokemonList.find(item => item.id === parseInt(id));
     return (
        <Fragment>
@@ -59,6 +61,10 @@ class PokemonDetails extends Component {
                 <img src={pokemon.sprites.front_default} alt={pokemon.name} />
               </div>
             </div>
+            <Link to="/home" className="button__back">
+              <img src={arrowBack} alt="" className="back__icon" />
+              Volver
+            </Link>
           </div>
        </Fragment>
     );
