@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './styles.scss';
 import { Link } from 'react-router-dom';
 import arrowBack from '../../images/icons/arrowBack.png';
+import PropTypes from 'prop-types';
 
 class PokemonDetails extends Component {
   componentWillUnmount() {
@@ -71,6 +72,10 @@ class PokemonDetails extends Component {
   }
 }
 
-
+PokemonDetails.propTypes = {
+  pokemonList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  clearFilter: PropTypes.func,
+  id: PropTypes.string.isRequired
+};
 
 export default PokemonDetails;

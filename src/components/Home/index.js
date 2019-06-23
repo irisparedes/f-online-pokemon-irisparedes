@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PokemonList from '../PokemonList';
 import Filter from '../Filter';
-
+import PropTypes from 'prop-types';
 
 export default function Home({ filterBy, pokemonList, getUserValue }) {
   return (
@@ -18,3 +18,9 @@ export default function Home({ filterBy, pokemonList, getUserValue }) {
     </Fragment>
   );
 }
+
+Home.propTypes = {
+  filterBy: PropTypes.string,
+  getUserValue: PropTypes.func,
+  pokemonList: PropTypes.arrayOf(PropTypes.object)
+};

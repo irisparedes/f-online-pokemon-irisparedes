@@ -17,6 +17,7 @@ class App extends Component {
     };
     
     this.getUserValue = this.getUserValue.bind(this);
+    this.clearFilter = this.clearFilter.bind(this);
   }
 
   componentDidMount() {
